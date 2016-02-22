@@ -1,17 +1,17 @@
-name = "Casper"
+name = "Hasper"
 license = "MIT"
-licenselink = "https://github.com/vjeantet/hugo-theme-casper/blob/master/LICENSE.md"
-description = "Casper theme from Ghost Foundation"
-homepage = "http://vjeantet.fr/"
+licenselink = "https://raw.githubusercontent.com/dencold/hasper/master/LICENSE"
+description = "Casper theme from Ghost Foundation, ported to Hugo"
+homepage = "https://github.com/dencold/hasper"
 tags = ["blog"]
 features = ["disqus", "google analytics","share"]
 min_version=0.14
 
 [author]
-  name = "Valere JEANTET"
-  homepage = "http://vjeantet.fr"
+  name = "Dennis Coldwell"
+  homepage = "http://dencold.com"
 
 [original]
-  name = "Casper"
-  homepage = "https://github.com/TryGhost/Casper"
-  repo = "https://github.com/TryGhost/Casper"
+  name = "Valere JEANTET"
+  homepage = "http://vjeantet.fr/"
+  repo = "https://github.com/vjeantet/hugo-theme-casper"
