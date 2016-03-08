@@ -16,6 +16,8 @@ Once you're done, simply clone this repository into the `themes` subdirectory of
 
 ## Sample Configuration
 
+Here is a sample configuration for a fictional Baywatch enthusiast site:
+
 ```yaml
 ---
 baseurl: "http://baywatch.com/"
@@ -75,3 +77,6 @@ author:
 
 You can now reference either "david" or "pamela" on the author attribute of a post's [front-matter](https://gohugo.io/content/front-matter/) and their information will automatically get pulled in by hugo.
 
+## Attribution
+
+Hasper was originally [a fork](https://github.com/dencold/hugo-theme-casper) of the [hugo-theme-casper](https://github.com/vjeantet/hugo-theme-casper). This version has been updated with thumbnail fixes as well as icon aesthetic improvements.
