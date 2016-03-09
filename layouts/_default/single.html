@@ -3,7 +3,7 @@
 {{$author := index .Site.Author (or .Params.author .Site.Params.author)}}
 
 {{if .Params.image}}
-<header class="main-header post-head" style="background-image: url({{ $baseurl }}{{.Params.image}})">
+<header class="main-header post-head" style="background-image: url({{.Params.image}})">
   <nav class="main-nav overlay clearfix">
 {{else}}
 <header class="main-header post-head no-cover">
@@ -11,7 +11,7 @@
 {{end}}
 
   {{ if .Site.Params.logo }}
-      <a class="blog-logo" href="{{.Site.BaseURL}}"><img src="{{.Site.BaseURL}}{{ .Site.Params.logo }}" alt="Home" /></a>
+      <a class="blog-logo" href="{{.Site.BaseURL}}"><img src="{{ .Site.Params.logo }}" alt="Home" /></a>
   {{end}}
   {{ if .Site.Menus.main }}
       <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
@@ -56,11 +56,11 @@
 
     {{if $author.thumbnail}}
     <figure class="author-image">
-        <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{ $baseurl }}{{$author.thumbnail}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
+        <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{$author.thumbnail}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
     </figure>
     {{else if .Site.Params.logo}}
     <figure class="author-image">
-      <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{ $baseurl }}{{.Site.Params.logo}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
+      <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{.Site.Params.logo}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
     </figure>
     {{end}}
 

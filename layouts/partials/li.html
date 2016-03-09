@@ -10,9 +10,9 @@
     </section>
     <footer class="post-meta">
         {{ if $author.thumbnail }}
-            <img class="author-thumb" src="{{ .Site.BaseURL }}{{ $author.thumbnail }}" alt="Author image" nopin="nopin" />
+            <img class="author-thumb" src="{{ $author.thumbnail }}" alt="Author image" nopin="nopin" />
         {{else if .Site.Params.logo }}
-            <img class="author-thumb" src="{{ .Site.BaseURL }}{{.Site.Params.logo}}" alt="Author image" nopin="nopin" />
+            <img class="author-thumb" src="{{.Site.Params.logo}}" alt="Author image" nopin="nopin" />
         {{end}}
         {{if and (ne .Params.author .Site.Params.author) .Params.author}}
         {{$author := index .Site.Data.authors .Params.author }}
