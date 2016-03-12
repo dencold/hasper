@@ -79,4 +79,12 @@ You can now reference either "david" or "pamela" on the author attribute of a po
 
 ## Attribution
 
-Hasper was originally [a fork](https://github.com/dencold/hugo-theme-casper) of the [hugo-theme-casper](https://github.com/vjeantet/hugo-theme-casper). This version has been updated with thumbnail fixes as well as icon aesthetic improvements.
+Hasper was originally [a fork](https://github.com/dencold/hugo-theme-casper) of the [hugo-theme-casper](https://github.com/vjeantet/hugo-theme-casper). This version has been updated with the following improvements: 
+
+* author thumbnail fixes across the site (original version only worked on list template): 25467fc92ca611ae7a6d517c16b47cdac0ae9dcb
+* switching from bespoke `.Site.Data.Author` in favor of Hugo's canonical `.Site.Author`: 25467fc92ca611ae7a6d517c16b47cdac0ae9dcb
+* icon aesthetic improvements, previous styles had ugly underlines: 22380914098cbf0dad119be18d7727521f097a29
+* removing unused `page` directory which contained duplicate code: 8c2f9e8c5b138d89e1b5e2c39d2d6210c928ad9f
+* allowing for external image linking (gravatar, twitter, etc), original theme hardcoded site's base url: 06afad23845e6e51c0ac55cef29c2e7caf7878d5
+* share icons are now user-configurable: b334fed9c5e88447b98e5908c362f3d165e1ee02
+
