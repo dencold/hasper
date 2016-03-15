@@ -65,6 +65,12 @@
     </script>
     {{end}}
 
+    {{with .Site.Params.highlightjsTheme}}
+    <link rel="stylesheet" href="/css/highlightjs/{{.}}.css">
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    {{end}}
+
     {{ if .Site.Params.customHeaderPartial }}
         {{ partial .Site.Params.customHeaderPartial . }}
     {{ end }}
