@@ -371,11 +371,12 @@ pre {
 }
 
 pre code, pre tt {
+    display: block;
     font-size: inherit;
     white-space: pre-wrap;
     background: transparent;
     border: none;
-    padding: 0;
+    padding: 0.5em;
 }
 
 kbd {
