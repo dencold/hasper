@@ -6,7 +6,9 @@
         <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     </header>
     <section class="post-excerpt">
-        <p>{{ .Summary }} <a class="read-more" href="{{.RelPermalink}}">&raquo;</a></p>
+      <a class="read-more" href="{{.RelPermalink}}">
+        <p>{{ .Summary }} &raquo;</p>
+      </a>
     </section>
     <footer class="post-meta">
         {{ if $author.thumbnail }}
