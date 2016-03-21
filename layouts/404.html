@@ -1,4 +1,17 @@
-{{ partial "header.html" . }}
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+  {{ partial "meta_includes.html" . }}
+  <title>
+    {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
+  </title>
+  {{ partial "head_includes.html" . }}
+</head>
+<body class="nav-closed">
+
+  {{ partial "navigation.html" . }}
+
+ <div class="site-wrapper">
 
 {{if .Site.Params.cover}}
 <header class="main-header " style="background-image: url({{.Site.Params.cover}})">

@@ -1,4 +1,18 @@
-{{ partial "header.html" . }}
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+  {{ partial "meta_includes.html" . }}
+  <title>
+    {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
+  </title>
+  {{ partial "head_includes.html" . }}
+</head>
+<body class="nav-closed">
+
+  {{ partial "navigation.html" . }}
+
+ <div class="site-wrapper">
+
 {{ $baseurl := .Site.BaseURL }}
 {{$author := index .Site.Author (or .Params.author .Site.Params.author)}}
 
