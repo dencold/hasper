@@ -1,0 +1,39 @@
+          <div class="social">
+            {{ if .Site.Params.linkedinName }}
+                <a class="icon-linkedin" href="https://www.linkedin.com/in/{{ .Site.Params.linkedinName }}" target="_blank">
+                  <span class="hidden">LinkedIn</span>
+                </a>
+            {{end}}
+            {{ if .Site.Params.githubName }}
+                <a class="icon-github" href="https://github.com/{{ .Site.Params.githubName }}" target="_blank">
+                  <span class="hidden">GitHub</span>
+                </a>
+            {{end}}
+            {{ if .Site.Params.twitterName }}
+                <a class="icon-twitter" href="https://twitter.com/{{ .Site.Params.twitterName }}" target="_blank">
+                  <span class="hidden">Twitter</span>
+                </a>
+            {{end}}
+            {{ if .Site.Params.facebookName }}
+                <a class="icon-facebook" href="https://www.facebook.com/{{ .Site.Params.facebookName }}" target="_blank">
+                  <span class="hidden">Facebook</span>
+                </a>
+            {{end}}
+            {{ if .Site.Params.instagramName }}
+                <a class="icon-instagram" href="https://instagram.com/{{ .Site.Params.instagramName }}" target="_blank">
+                  <span class="hidden">Instagram</span>
+                </a>
+            {{end}}
+            {{ if .Site.Params.pinterestName }}
+                <a class="icon-pinterest" href="https://www.pinterest.com/{{ .Site.Params.pinterestName }}" target="_blank">
+                  <span class="hidden">Pinterest</span>
+                </a>
+            {{end}}
+            {{ if .Site.Params.googlePlusName }}
+                <a class="icon-google-plus" href="https://google.com/+{{ .Site.Params.googlePlusName }}" target="_blank">
+                  <span class="hidden">Google+</span>
+                </a>
+            {{end}}
+          </div>
+
+
