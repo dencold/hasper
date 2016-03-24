@@ -15,32 +15,9 @@
 
 {{ $baseurl := .Site.BaseURL }}
 {{$author := index .Site.Author (or .Params.author .Site.Params.author)}}
-
-{{if .Params.image}}
-<header class="main-header post-head" style="background-image: url({{.Params.image}})">
-  <nav class="main-nav overlay clearfix">
-{{else}}
-<header class="main-header post-head no-cover">
-  <nav class="main-nav clearfix">
-{{end}}
-
-  {{ if .Site.Params.logo }}
-      <a class="blog-logo" href="{{.Site.BaseURL}}"><img src="{{ .Site.Params.logo }}" alt="Home" /></a>
-  {{end}}
-  {{ if .Site.Menus.main }}
-      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
-  {{else}}
-      <a class="menu-button icon-feed" href="{{ .Site.BaseURL }}index.xml">&nbsp;&nbsp;Subscribe</a>
-  {{end}}
-  </nav>
-</header>
-
-
+    {{ partial "banner.html" . }}
 
 <main class="content" role="main">
-
-
-
 
   <article class="post {{ .Section }}">
 
