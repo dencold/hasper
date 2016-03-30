@@ -19,10 +19,6 @@
 <main class="content" role="main">
     {{ $paginator := .Paginator }}
 
-	<div class="extra-pagination inner">
-    {{ partial "pagination.html" $paginator }}
-	</div>
-
 	{{ range $index, $page := $paginator.Pages }}
 	   {{ partial "li.html" . }}
 	{{ end }}

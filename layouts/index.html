@@ -36,10 +36,6 @@
     {{ $list := where $list "Section" "!=" "" }}
     {{ $paginator := .Paginate ( $list ) }}
 
-    <div class="extra-pagination inner">
-        {{ partial "pagination.html" $paginator }}
-    </div>
-
     {{ range $index, $page := $paginator.Pages }}
         {{ partial "li.html" . }}
     {{ end }}
