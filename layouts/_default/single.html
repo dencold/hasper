@@ -44,7 +44,6 @@
 
   <footer class="post-footer">
 
-
     {{if $author.thumbnail}}
     <figure class="author-image">
         <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{$author.thumbnail}})"><span class="hidden">{{.Site.Params.author}}'s Picture</span></a>
@@ -56,9 +55,7 @@
     {{end}}
 
     {{ partial "author.html" . }}
-
     {{ partial "share.html" . }}
-
     {{ partial "disqus.html" . }}
 
   </footer>

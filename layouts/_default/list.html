@@ -17,7 +17,7 @@
 {{ partial "banner.html" . }}
 
 <main class="content" role="main">
-    {{ $paginator := .Paginator }}
+  {{ $paginator := .Paginator }}
 
 	{{ range $index, $page := $paginator.Pages }}
 	   {{ partial "li.html" . }}
@@ -25,7 +25,5 @@
 
 	{{ partial "pagination.html" $paginator }}
 </main>
-
-
 
 {{ partial "footer.html" . }}
