@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="{{.Site.LanguageCode}}">
 <head>
-  {{ partial "meta_includes.html" . }}
+  {{partial "meta_includes.html" .}}
   <title>
-    {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
+    {{if ne .URL "/"}} {{.Title}} &middot; {{end}} {{.Site.Title}}
   </title>
-  {{ partial "head_includes.html" . }}
+  {{partial "head_includes.html" .}}
 </head>
 <body class="nav-closed">
-
-  {{ partial "navigation.html" . }}
+  {{partial "navigation.html" .}}
 
   <div class="site-wrapper">
-    {{ partial "banner_full.html" . }}
+    {{$paginator := .Paginator}}
+
+    {{/*
+         we only show the fullscreen banner if we are on the first page
+         (otherwise it gets very confusing for the user, who needs to scroll
+         in order to see more content)
+    */}}
+    {{if eq $paginator.PageNumber 1}}
+      {{partial "banner_full.html" .}}
+    {{else}}
+      {{partial "banner.html" .}}
+    {{end}}
 
     <main id="content" class="content" role="main">
+      {{range $index, $page := $paginator.Pages}}
+        {{partial "li.html" .}}
+      {{end}}
 
-    {{ $paginator := .Paginator }}
-
-    {{ range $index, $page := $paginator.Pages }}
-        {{ partial "li.html" . }}
-    {{ end }}
-
-    {{ partial "pagination.html" $paginator }}
-
+      {{partial "pagination.html" $paginator}}
     </main>
 
-{{ partial "footer.html" . }}
+{{partial "footer.html" .}}
