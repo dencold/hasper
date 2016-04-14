@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="{{.Site.LanguageCode}}">
 <head>
-  {{ partial "meta_includes.html" . }}
+  {{partial "meta_includes.html" .}}
   <title>
-    {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
+    404 Not Found - {{.Site.Title}}
   </title>
-  {{ partial "head_includes.html" . }}
+  {{partial "head_includes.html" .}}
 </head>
 <body class="nav-closed">
-
-  {{ partial "navigation.html" . }}
+  {{partial "navigation.html" .}}
 
   <div class="site-wrapper">
-    {{ partial "banner.html" . }}
+    {{partial "banner.html" .}}
 
     <main id="content" class="content" role="main">
 
       <article class="post">
-        <h1>404 Not Found</h1>
-        <p>Sorry, but we couldn't find the page you're looking for.</p>
-        <p>Please head back <a href="/">home</a>.</p>
+        <h1>Nope, that page doesn't exist</h1>
+        <p>
+          You may have mis-typed the URL, please give it another shot. Or, you
+          might have better luck heading back to the <a href="/">homepage</a>.
+        </p>
       </article>
 
-{{ partial "footer.html" . }}
+{{partial "footer.html" .}}
