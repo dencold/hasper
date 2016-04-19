@@ -1,7 +1,7 @@
 {{ $baseurl := .Site.BaseURL }}
 {{$author := index .Site.Author (or .Params.author .Site.Params.author)}}
 
-<article class="post {{ .Section }}">
+<article class="post with-divider {{ .Section }}">
     <header class="post-header">
         <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     </header>
