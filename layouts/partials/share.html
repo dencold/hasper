@@ -1,29 +1,33 @@
-{{ if ne .Params.share false}}
+{{$sharing_disabled := or (eq .Params.sharing false) (not .Site.Params.sharing)}}
+
+{{ if not $sharing_disabled}}
+{{$sharing := or .Params.sharing .Site.Params.sharing}}
+
 <section class="share">
   <h4>Share this {{ if .Type }}{{.Type}}{{else}}post{{end}}</h4>
   
-  {{if index .Site.Params.shares "twitter"}}
+  {{if index $sharing "twitter"}}
   <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text={{ .Title | safeHTML}}&amp;url={{ .Permalink }}"
       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <span class="hidden">Twitter</span>
   </a>
   {{end}}
  
-  {{if index .Site.Params.shares "facebook"}}
+  {{if index $sharing "facebook"}}
   <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
       <span class="hidden">Facebook</span>
   </a>
   {{end}}
 
-  {{if index .Site.Params.shares "pinterest"}}
+  {{if index $sharing "pinterest"}}
   <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url={{ .Permalink }}{{ if .Params.pinterestmedia }}&amp;media={{ .Site.BaseURL }}{{ .Params.pinterestmedia }}{{ end }}&amp;description={{ .Title | safeHTML}}"
       onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
       <span class="hidden">Pinterest</span>
   </a>
   {{end}}
   
-  {{if index .Site.Params.shares "google-plus"}}
+  {{if index $sharing "google-plus"}}
   <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url={{ .Permalink }}"
      onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
       <span class="hidden">Google+</span>
