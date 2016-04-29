@@ -983,6 +983,7 @@ body:not(.post-template) .post-title {
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
+    padding: 2%;
 }
 
 .author-thumb {
