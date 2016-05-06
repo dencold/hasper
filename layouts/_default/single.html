@@ -25,16 +25,7 @@
         <h1 class="post-title">{{.Title}}</h1>
         <small>{{.Description}}</small>
 
-        <section class="post-meta">
-        {{ if eq .Section "post"}}
-          <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-            {{ .Date.Format "Jan 2, 2006" }}
-          </time>
-        {{end}}
-         {{ range .Params.tags }}
-          <span class="post-tag small"><a href="{{ $baseurl }}tags/{{ . | urlize }}/">#{{ . }}</a></span>
-         {{ end }}
-        </section>
+        {{partial "post_meta.html" .}}
     </header>
 
     <section class="post-content">
