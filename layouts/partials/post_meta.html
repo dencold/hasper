@@ -1,21 +1,21 @@
-{{$author := index .Site.Author (or .Params.author .Site.Params.author)}}
+{{/* if author is set on the post's params, use that, if not, check if we have an
+     author configured in the Site params */}}
+{{$author := or .Params.author .Site.Params.author}}
+
+{{/* if we have a .Site.Author struct, see if there is an entry defined for
+     the post's author and use that to set our metadata */}}
+{{$authorDetail := index .Site.Author $author}}
+
 <section class="post-meta">
-  {{if $author}}
-    {{if $author.thumbnail}}
-      <img class="author-thumb" src="{{$author.thumbnail}}" alt="Author image" nopin="nopin" />
-    {{else if .Site.Params.logo }}
-      <img class="author-thumb" src="{{.Site.Params.logo}}" alt="Author image" nopin="nopin" />
+  {{if $authorDetail}}
+    {{with $authorDetail.thumbnail}}
+      <img class="author-thumb" src="{{.}}" alt="Author image" nopin="nopin" />
     {{end}}
- 
-    {{/* if the author has a name attribute, use it, otherwise default to using just the field
-         this helps with the situation when we just want to define one author name and not have
-         to create the .Site.Author structure */}}
-    {{if $author.name}}
-      {{$author.name}}
-    {{else}}
-      {{$author}}
-    {{end}}
-  {{end}} 
+  {{end}}
+
+  {{/* print out the shortname for the author in the metadata section */}}
+  {{$author}}
+
   <time class="post-date" datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML}}">
     {{.Date.Format "2 Jan 2006"}}
   </time>
