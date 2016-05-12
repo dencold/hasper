@@ -1,0 +1,47 @@
+{{$author := index .Site.Author .Params.author}}
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+  {{partial "meta_includes.html" .}}
+  <title>
+    {{$author.name}} &middot; {{.Site.Title}}
+  </title>
+  {{partial "head_includes.html" .}}
+</head>
+<body class="nav-closed">
+  {{partial "navigation.html" .}}
+
+  <div class="site-wrapper">
+  {{$coverImage := or .Params.cover .Site.Params.authorCover .Site.Params.cover}}
+
+  {{if not $coverImage}}
+	<header class="main-header tag-head no-cover">
+  {{else}}
+  <header class="main-header post-head" style="background-image: url({{$coverImage}})">
+  {{end}}
+
+    {{partial "nav.html" .}}
+    <div class="vertical">
+      <div class="main-header-content inner">
+       {{if $author.thumbnail}}
+         <figure class="author-cover">
+           <div class="img" style="background-image: url({{$author.thumbnail}})"></div>
+         </figure>
+       {{end}}
+       <h1 class="page-title">{{$author.name}}</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="content" role="main">
+    <article class="post">
+      <section class="post-content">
+        {{.Content}}
+      </section>
+
+      <footer class="post-footer">
+
+      </footer>
+    </article>
+  </main>
+{{partial "footer.html" .}}
