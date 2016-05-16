@@ -11,7 +11,7 @@
   {{partial "navigation.html" .}}
 
   <div class="site-wrapper">
-    {{$paginator := .Paginator}}
+    {{$paginator := .Paginate (where .Data.Pages "Section" "!=" "author")}}
 
     {{/*
          we only show the fullscreen banner if we are on the first page
