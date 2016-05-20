@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+  {{ partial "meta_includes.html" . }}
+  <title>
+    {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
+  </title>
+  {{ partial "head_includes.html" . }}
+</head>
+<body class="nav-closed">
+
+  {{ partial "navigation.html" . }}
+
+  <div class="site-wrapper">
+    {{ partial "banner.html" . }}
+
+    <main class="content" role="main">
+      {{ if .Site.Author }}
+        {{ range $shortname, $author := .Site.Author }}
+        <article class="post with-divider">
+          <section class="author">
+            {{if $author.thumbnail}}
+              <div class="author-list-img" style="background-image: url({{$author.thumbnail}})"></div>
+            {{end}}
+            <h4><a href="/author/{{$shortname}}">{{$author.name}}</a></h4>
+            {{if $author.bio}}
+            <p><a href="/author/{{$shortname}}">{{$author.bio}}</a></p>
+            {{else}}
+            <p>Read <a href="/author/{{$shortname}}">more posts</a> by this author.</p>
+            {{end}}
+            <div class="author-meta">
+            
+            </div>
+          </section>
+      </article>
+      {{end}}
+    {{end}}
+    </main>
+
+{{ partial "footer.html" . }}
