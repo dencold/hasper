@@ -24,9 +24,7 @@
     <div class="vertical">
       <div class="main-header-content inner">
        {{if $author.thumbnail}}
-         <figure class="author-cover">
-           <div class="img" style="background-image: url({{$author.thumbnail}})"></div>
-         </figure>
+         <div class="author-cover-img" style="background-image: url({{$author.thumbnail}})"></div>
        {{end}}
        <h1 class="page-title">{{$author.name}}</h1>
       </div>
