@@ -1063,6 +1063,9 @@ body:not(.post-template) .post-title {
     line-height: 1.5em;
 }
 
+.date-list {
+    margin-top: 3rem;
+}
 
 /* ==========================================================================
    5. Single Post - When you click on an individual post
