@@ -41,7 +41,7 @@ params:
   twitterName: "thehoff"
   hideHUGOSupport: false
   highlightjsTheme: "tomorrow-night-eighties"
-  shares:
+  sharing:
     twitter: false
     facebook: true
     google-plus: true
