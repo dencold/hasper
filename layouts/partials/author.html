@@ -1,4 +1,4 @@
-{{ if or .Params.author .Site.Params.author }}
+{{if or .Params.author .Site.Params.author}}
 {{$author := index .Site.Author (or .Params.author .Site.Params.author)}}
 <section class="author">
   <h4><a href="{{.Site.BaseURL}}">{{$author.name}}</a></h4>
@@ -8,8 +8,12 @@
   <p>Read <a href="{{.Site.BaseURL}}">more posts</a> by this author.</p>
   {{end}}
   <div class="author-meta">
-    {{with $author.location}}<span class="author-location icon-location">{{.}}</span>{{end}}
-    {{with $author.website}}<span class="author-link icon-link"><a href="{{.}}">{{.}}</a></span>{{end}}
+    {{with $author.location}}
+    <span class="author-location icon-location">{{.}}</span>
+    {{end}}
+    {{with $author.website}}
+    <span class="author-link icon-link"><a href="{{.}}">{{.}}</a></span>
+    {{end}}
   </div>
 </section>
 {{end}}

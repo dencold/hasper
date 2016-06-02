@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="{{.Site.LanguageCode}}">
 <head>
-  {{ partial "meta_includes.html" . }}
+  {{partial "meta_includes.html" .}}
   <title>
-    {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
+    {{if ne .URL "/"}} {{.Title}} &middot; {{end}} {{.Site.Title}}
   </title>
-  {{ partial "head_includes.html" . }}
+  {{partial "head_includes.html" .}}
 </head>
 <body class="nav-closed">
 
-  {{ partial "navigation.html" . }}
+  {{partial "navigation.html" .}}
 
  <div class="site-wrapper">
 
-{{ $baseurl := .Site.BaseURL }}
-{{ partial "banner.html" . }}
+{{$baseurl := .Site.BaseURL}}
+{{partial "banner.html" .}}
 
 <main class="content" role="main">
-  {{ $paginator := .Paginator }}
+  {{$paginator := .Paginator}}
 
-	{{ range $index, $page := $paginator.Pages }}
-	   {{ partial "li.html" . }}
-	{{ end }}
+	{{range $index, $page := $paginator.Pages}}
+	   {{partial "li.html" .}}
+	{{end}}
 
-	{{ partial "pagination.html" $paginator }}
+	{{partial "pagination.html" $paginator}}
 </main>
 
-{{ partial "footer.html" . }}
+{{partial "footer.html" .}}
