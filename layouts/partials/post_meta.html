@@ -23,9 +23,8 @@
   {{if .Params.tags}}
     {{$baseURL := .Site.BaseURL}}
     {{range $index, $tag := .Params.tags}}
-        <a href="{{$baseURL}}tags/{{$tag | urlize}}/">#{{$tag}}</a>
+      <a href="{{$baseURL}}tags/{{$tag | urlize}}/">#{{$tag}}</a>
     {{end}}
   {{end}}
   </div>
-  
 </section>

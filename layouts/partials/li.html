@@ -1,11 +1,11 @@
-<article class="post with-divider {{ .Section }}">
-    <header class="post-header">
-        <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    </header>
-    <section class="post-excerpt">
-      <a class="read-more" href="{{.RelPermalink}}">
-        <p>{{ .Summary }} &raquo;</p>
-      </a>
-    </section>
-    {{partial "post_meta.html" .}}
+<article class="post with-divider {{.Section}}">
+  <header class="post-header">
+    <h2 class="post-title"><a href="{{.RelPermalink}}">{{.Title}}</a></h2>
+  </header>
+  <section class="post-excerpt">
+    <a class="read-more" href="{{.RelPermalink}}">
+      <p>{{.Summary}} &raquo;</p>
+    </a>
+  </section>
+  {{partial "post_meta.html" .}}
 </article>
