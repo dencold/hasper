@@ -2,9 +2,26 @@
 
 Hasper is a port of [Ghost's](https://ghost.org/) casper theme for the [Hugo](https://gohugo.io) static-site generator. It hopes to get you from zero to beautiful with minimal effort.
 
-## Installing
+## Installing Hugo
 
-If you haven't yet installed Hugo, make sure to follow [these instructions](https://gohugo.io/overview/quickstart/) first to install the hugo binary as well as setup your site directory. 
+If you haven't yet installed Hugo, I recommend reading [these instructions](https://gohugo.io/overview/quickstart/) first to get yourself acquainted with the process. Here's a quick summary to get Hugo working on your system:
+
+0. Go to Hugo's [release page](https://github.com/spf13/hugo/releases) and grab the tar file that matches your OS and architecture (for example if you are on a Mac, you'd want `hugo_0.16_osx-64bit.tgz`).
+0. Unzip the tar file and copy the hugo binary into your path:
+
+```
+$ mkdir hugo_0.16; tar xzvf hugo_0.16_osx-64bit.tgz -C hugo_0.16
+$ cp hugo_0.16/hugo ~/bin
+```
+
+Now you should have Hugo installed and see its version:
+
+```
+$ hugo version
+Hugo Static Site Generator v0.16 BuildDate: 2016-06-06T05:37:59-07:00
+```
+
+## Installing Theme
 
 Once you're done, simply clone this repository into the `themes` subdirectory of your site folder:
 
