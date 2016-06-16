@@ -21,6 +21,31 @@ $ hugo version
 Hugo Static Site Generator v0.16 BuildDate: 2016-06-06T05:37:59-07:00
 ```
 
+## Creating a new site
+
+Hugo has a helper command to scaffold a new site together. It creates all of the files and initial directory structure you need to start writing content and getting things posted. Let's do this for the example site I am working on, bayactive.org:
+
+```
+$ hugo new site bayactive
+$ cd bayactive
+$ ls -1
+```
+
+When you run the `ls` command you should see output like the following:
+
+```
+$ ls -1
+ archetypes
+ config.toml
+ content
+ data
+ layouts
+ static
+ themes
+```
+
+That's all the organization you'll need to get your site going.
+
 ## Installing Theme
 
 Once you're done, simply clone this repository into the `themes` subdirectory of your site folder:
