@@ -46,16 +46,16 @@ $ ls -1
 
 That's all the organization you'll need to get your site going.
 
-## Installing Theme
+## Installing the theme
 
-Once you're done, simply clone this repository into the `themes` subdirectory of your site folder:
+You've got Hugo installed and have the scaffolding for your site, it's finally time to install the hasper theme! All you'll need to do is clone the hasper repository into your theme directory for your site and you're done! We'll assume our sample site of `bayactive` here, but subsitute your site's name in the command below.
 
 ```bash
-$ cd /your/site/directory/themes
+$ cd bayactive/themes
 $ git clone git@github.com:dencold/hasper.git
 ```
 
-...and you can start using the theme immediately:
+You can start using the theme immediately:
 
 `$ hugo server -t hasper`
 
