@@ -28,10 +28,9 @@ Hugo has a helper command to scaffold a new site together. It creates all of the
 ```bash
 $ hugo new site bayactive
 $ cd bayactive
-$ ls -1
 ```
 
-When you run the `ls` command you should see output like the following:
+When you run `ls` within the site's directory you should see output like the following:
 
 ```bash
 $ ls -1
