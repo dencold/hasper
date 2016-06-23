@@ -26,7 +26,7 @@ Hugo Static Site Generator v0.16 BuildDate: 2016-06-06T05:37:59-07:00
 Hugo has a helper command to scaffold a new site together. It creates all of the files and initial directory structure you need to start writing content and getting things posted. Let's do this for the example site I am working on, bayactive.org:
 
 ```bash
-$ hugo new site bayactive
+$ hugo new site bayactive -f yaml
 $ cd bayactive
 ```
 
@@ -35,7 +35,7 @@ When you run `ls` within the site's directory you should see output like the fol
 ```bash
 $ ls -1
  archetypes
- config.toml
+ config.yaml
  content
  data
  layouts
