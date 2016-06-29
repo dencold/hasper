@@ -96,22 +96,22 @@ Thanks for visiting BayActive! We hope to be a helpful resource for finding hiki
 Save that file, and spin up hugo's internal webserver, using the hasper theme:
 
 ```bash
-$ hugo serve --theme hasper
+$ hugo serve -D --theme hasper
 ```
 
 You should see Hugo spit out the following logs:
 
 ```
 Started building site
-0 of 1 draft rendered
+1 of 1 draft rendered
 0 future content
 0 expired content
-0 pages created
+1 pages created
 0 non-page files copied
-0 paginator pages created
+2 paginator pages created
 0 tags created
 0 categories created
-in 18 ms
+in 28 ms
 Watching for changes in /home/coldwd/src/github.com/dencold/bayactive/{data,content,layouts,static,themes}
 Serving pages from memory
 Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
