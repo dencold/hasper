@@ -68,7 +68,7 @@ We'll use another Hugo helper command to create a file that represents a new pos
 $ hugo new post/welcome.md -f yaml
 ```
 
-That command creates a new file located at `content/post/welcome.md`. Also, a quick note on the `-f yaml` option I have been using. Hugo defaults to [toml]() for metadata, which I'm not a fan of. I prefer to use [yaml]() as my format for these settings. 
+That command creates a new file located at `content/post/welcome.md`. Also, a quick note on the `-f yaml` option I have been using. Hugo defaults to [toml](https://github.com/toml-lang/toml) for metadata, which I'm not a fan of. I prefer to use [yaml](http://yaml.org) as my format for these settings.
 
 You can open up the `welcome.md` file in your favorite editor and you should see something resembling the following:
 
