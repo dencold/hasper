@@ -54,11 +54,71 @@ $ cd bayactive
 $ git clone git@github.com:dencold/hasper.git themes/hasper
 ```
 
-You can start using the theme immediately:
+At this point, you can start using the theme immediately by issuing the following command at the root directory of your site:
 
 `$ hugo server -t hasper`
 
-## Sample Configuration
+But, you don't have any content currently, let's fix that.
+
+## Creating your first post
+
+We'll use another Hugo helper command to create a file that represents a new post on your site:
+
+```bash
+$ hugo new post/welcome.md -f yaml
+```
+
+That command creates a new file located at `content/post/welcome.md`. Also, a quick note on the `-f yaml` option I have been using. Hugo defaults to [toml]() for metadata, which I'm not a fan of. I prefer to use [yaml]() as my format for these settings. 
+
+You can open up the `welcome.md` file in your favorite editor and you should see something resembling the following:
+
+```yaml
+---
+date: 2016-06-27T17:09:17-07:00
+draft: true
+title: welcome
+---
+
+```
+
+Let's add an actual welcome message here & make sure people know what the site is all about:
+
+```yaml
+---
+date: 2016-06-27T17:09:17-07:00
+draft: true
+title: welcome
+---
+
+Thanks for visiting BayActive! We hope to be a helpful resource for finding hiking/biking/running routes in the bay area.
+```
+
+Save that file, and spin up hugo's internal webserver, using the hasper theme:
+
+```bash
+$ hugo serve --theme hasper
+```
+
+You should see Hugo spit out the following logs:
+
+```
+Started building site
+0 of 1 draft rendered
+0 future content
+0 expired content
+0 pages created
+0 non-page files copied
+0 paginator pages created
+0 tags created
+0 categories created
+in 18 ms
+Watching for changes in /home/coldwd/src/github.com/dencold/bayactive/{data,content,layouts,static,themes}
+Serving pages from memory
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+```
+
+## Sample configuration
 
 Here is a sample configuration for a fictional Baywatch enthusiast site:
 
