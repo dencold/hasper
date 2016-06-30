@@ -27,31 +27,30 @@ Hugo has a helper command to scaffold a new site together. It creates all of the
 
 ```bash
 $ hugo new site bayactive -f yaml
-$ cd bayactive
 ```
 
-When you run `ls` within the site's directory you should see output like the following:
+When you run `ls` on the site's directory you should see output like the following:
 
 ```bash
-$ ls -1
- archetypes
- config.yaml
- content
- data
- layouts
- static
- themes
+$ ls -1 bayactive
+archetypes
+config.yaml
+content
+data
+layouts
+static
+themes
 ```
 
 That's all the organization you'll need to get your site going.
 
 ## Installing the theme
 
-You've got Hugo installed and have the scaffolding for your site, it's finally time to install the hasper theme! All you'll need to do is clone the hasper repository into your theme directory for your site and you're done! We'll assume our sample site of `bayactive` here, but subsitute your site's name in the command below.
+You've got Hugo installed and have the scaffolding for your site, it's finally time to install the hasper theme! All you'll need to do is add the hasper repository into your theme directory as a [git submodule](https://git-scm.com/docs/git-submodule) and you're done! We'll assume our sample site of `bayactive` here, but subsitute your site's name in the command below.
 
 ```bash
 $ cd bayactive
-$ git clone git@github.com:dencold/hasper.git themes/hasper
+$ git submodule add git@github.com:dencold/hasper.git themes/hasper
 ```
 
 At this point, you can start using the theme immediately by issuing the following command at the root directory of your site:
