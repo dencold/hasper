@@ -117,53 +117,8 @@ Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ```
 
-## Sample configuration
+If you point your web browser to [http://localhost:1313](http://localhost:1313), you'll see the following view:
 
-Here is a sample configuration for a fictional Baywatch enthusiast site:
-
-```yaml
----
-baseurl: "http://baywatch.com/"
-languageCode: "en-us"
-title: "Memories of Baywatch"
-paginate: 5
-Copyright: "All rights reserved - 2016"
-canonifyurls: true
-
-params:
-  description: "David Hasselhoff loves telling you about Baywatch."
-  cover: "images/cover.jpg"
-  author: "david"
-  logo: "images/logo.png"
-  googleAnalyticsUserID: ""
-  RSSLink: "http://feeds.feedburner.com/..."
-  githubName: "thehoff"
-  twitterName: "thehoff"
-  hideHUGOSupport: false
-  highlightjsTheme: "tomorrow-night-eighties"
-  sharing:
-    twitter: false
-    facebook: true
-    google-plus: true
-
-author:
-  david:
-    name: "David Hasselhoff"
-    bio: "Don't Hassle the Hoff"
-    location: "Baltimore, MD"
-    thumbnail: "images/avatar.jpg"
-
-menu:
-  main:
-    - name: "Blog"
-      weight: -120
-      identifier: "blog"
-      url: "/"
-    - name: "About"
-      weight: -110
-      identifier: "about"
-      url: "/about"
-```
 
 ## Configuring Multiple Authors
 
