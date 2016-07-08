@@ -119,6 +119,9 @@ Press Ctrl+C to stop
 
 If you point your web browser to [http://localhost:1313](http://localhost:1313), you'll see the following view:
 
+![First Look](https://raw.githubusercontent.com/dencold/static/master/hasper/bayactive-first-take.png)
+
+Which is...pretty boring. Let's fix that.
 
 ## Configuring Multiple Authors
 
