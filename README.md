@@ -123,6 +123,43 @@ If you point your web browser to [http://localhost:1313](http://localhost:1313),
 
 Which is...pretty boring. Let's fix that.
 
+## Configuring your site
+
+Way back at the [creating a new site](#creating-a-new-site) section, you created a `config.yaml` file which is responsible for setting up all the fun features of the Hasper theme. Open it up in your editor of choice and you'll see:
+
+```yaml
+---
+baseurl: http://replace-this-with-your-hugo-site.com/
+languageCode: en-us
+title: My New Hugo Site
+...
+```
+
+This was auto-generated when you ran the `hugo new site` command. It explains why we were seeing the generic text when we served up the site. Let's modify this to match what we expect for bayactive.
+
+```yaml
+---
+baseurl: http://www.bayactive.org
+languageCode: en-us
+title: BayActive
+...
+```
+
+So far we've been modifying the root config settings which apply to all Hugo sites. However, there is also the `params` mapping section which let's us do some theme-specific setup. Let's start using this section of the config to add a description, logo, and a nice cover picture. This will help make bayactive look like a real site.
+
+```yaml
+---
+baseurl: http://www.bayactive.org
+languageCode: en-us
+title: BayActive
+params:
+  cover: /img/cover.jpg
+  logo: /img/logo.jpg
+  description: Hikes, bikes & rides in the bay
+...
+```
+
+
 ## Configuring Multiple Authors
 
 You can add as many authors as you like under the `author` section of the `config.yaml`. In the example above, we just had one author, David Hasselhoff, here's how we could add Pamela to the blog roll:
