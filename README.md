@@ -154,11 +154,28 @@ languageCode: en-us
 title: BayActive
 params:
   cover: /img/cover.jpg
-  logo: /img/logo.jpg
+  logo: /img/logo.svg
   description: Hikes, bikes & rides in the bay
 ...
 ```
 
+A quick note that the `/img` path for the cover/logo assets needs to be under the `static` directory that was created [above](#creating-a-new-site). Your directory structure should look something like this:
+
+```bash
+$ tree
+.
+├── archetypes
+├── config.yaml
+├── content
+│   └── post
+│       └── welcome.md
+├── data
+├── layouts
+├── static
+│   └── img
+│       ├── cover.jpg
+│       └── logo.svg
+```
 
 ## Configuring Multiple Authors
 
