@@ -177,6 +177,15 @@ $ tree
 │       └── logo.svg
 ```
 
+## A better looking site
+
+Now that we have a proper cover image and logo in place, the page is starting to feel like a real site. If you make another call to `hugo serve` and refresh your browser state, this is what things should now look like:
+
+![First Look](https://raw.githubusercontent.com/dencold/static/master/hasper/bayactive-second.png)
+
+Much better!! Now, try to switch to your own cover image and logo. Update the `config.yaml` and rename the site/update the description. You've now got your very own static website. Start writing some content and share with the world!
+
+
 ## Configuring Multiple Authors
 
 You can add as many authors as you like under the `author` section of the `config.yaml`. In the example above, we just had one author, David Hasselhoff, here's how we could add Pamela to the blog roll:
