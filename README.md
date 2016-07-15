@@ -4,9 +4,9 @@ Hasper is a port of [Ghost's](https://ghost.org/) casper theme for the [Hugo](ht
 
 ## Installing Hugo
 
-If you haven't yet installed Hugo, I recommend reading [these instructions](https://gohugo.io/overview/quickstart/) first to get yourself acquainted with the process. Here's a quick summary to get Hugo working on your system:
+If you don't have Hugo installed, I recommend reading [these instructions](https://gohugo.io/overview/quickstart/) first. Here's a quick summary to get Hugo working on your system:
 
-0. Go to Hugo's [release page](https://github.com/spf13/hugo/releases) and grab the tar file that matches your OS and architecture (for example if you are on a Mac, you'd want `hugo_0.16_osx-64bit.tgz`).
+0. Go to Hugo's [release page](https://github.com/spf13/hugo/releases) and grab the tar file that matches your OS and architecture. For example, if you are on a Mac, you'd want `hugo_0.16_osx-64bit.tgz`.
 0. Unzip the tar file and copy the hugo binary into your path:
 
 ```bash
@@ -23,7 +23,7 @@ Hugo Static Site Generator v0.16 BuildDate: 2016-06-06T05:37:59-07:00
 
 ## Creating a new site
 
-Hugo has a helper command to scaffold a new site together. It creates all of the files and initial directory structure you need to start writing content and getting things posted. Let's do this for the example site I am working on, bayactive.org:
+Hugo has a helper command to scaffold a new site together. It creates the initial directory structure and files you need to start writing content. Let's do this for the example site I am working on, bayactive.org:
 
 ```bash
 $ hugo new site bayactive -f yaml
@@ -46,18 +46,14 @@ That's all the organization you'll need to get your site going.
 
 ## Installing the theme
 
-You've got Hugo installed and have the scaffolding for your site, it's finally time to install the hasper theme! All you'll need to do is add the hasper repository into your theme directory as a [git submodule](https://git-scm.com/docs/git-submodule) and you're done! We'll assume our sample site of `bayactive` here, but subsitute your site's name in the command below.
+Hugo is installed and the scaffolding for your site is in place, let's start using the hasper theme! All you'll need to do is add the hasper repository into your theme directory as a [git submodule](https://git-scm.com/docs/git-submodule) and you're done! We're using the example site, bayactive, to make it easy to follow along. Feel free to substitute your own site in the examples below if you wish.
 
 ```bash
 $ cd bayactive
 $ git submodule add git@github.com:dencold/hasper.git themes/hasper
 ```
 
-At this point, you can start using the theme immediately by issuing the following command at the root directory of your site:
-
-`$ hugo server -t hasper`
-
-But, you don't have any content currently, let's fix that.
+At this point, you could spin up Hugo's server and take a look at the site on your browser. But, you don't have any content to view, let's fix that...
 
 ## Creating your first post
 
@@ -69,7 +65,7 @@ $ hugo new post/welcome.md -f yaml
 
 That command creates a new file located at `content/post/welcome.md`. Also, a quick note on the `-f yaml` option I have been using. Hugo defaults to [toml](https://github.com/toml-lang/toml) for metadata, which I'm not a fan of. I prefer to use [yaml](http://yaml.org) as my format for these settings.
 
-You can open up the `welcome.md` file in your favorite editor and you should see something resembling the following:
+Open the `welcome.md` file in your favorite editor and you should see this:
 
 ```yaml
 ---
@@ -125,7 +121,7 @@ Which is...pretty boring. Let's fix that.
 
 ## Configuring your site
 
-Way back at the [creating a new site](#creating-a-new-site) section, you created a `config.yaml` file which is responsible for setting up all the fun features of the Hasper theme. Open it up in your editor of choice and you'll see:
+In the [new site creation](#creating-a-new-site) section, you generated a `config.yaml`. This file handles configuration for all the fun features of the hasper theme. Open it up in your editor of choice and you'll see:
 
 ```yaml
 ---
@@ -135,7 +131,7 @@ title: My New Hugo Site
 ...
 ```
 
-This was auto-generated when you ran the `hugo new site` command. It explains why we were seeing the generic text when we served up the site. Let's modify this to match what we expect for bayactive.
+This was auto-generated when you ran the `hugo new site` command. It explains why we were seeing the generic text when we served up the site. Let's change this to match what we expect for bayactive.
 
 ```yaml
 ---
@@ -145,7 +141,7 @@ title: BayActive
 ...
 ```
 
-So far we've been modifying the root config settings which apply to all Hugo sites. However, there is also the `params` mapping section which let's us do some theme-specific setup. Let's start using this section of the config to add a description, logo, and a nice cover picture. This will help make bayactive look like a real site.
+So far we've been modifying the root config settings which apply to all Hugo sites. But, there is also the `params` mapping section which lets us do some theme-specific setup. Let's start using this section of the config to add a description, logo, and a nice cover picture. This will help make bayactive look like a real site.
 
 ```yaml
 ---
@@ -159,7 +155,7 @@ params:
 ...
 ```
 
-A quick note that the `/img` path for the cover/logo assets needs to be under the `static` directory that was created [above](#creating-a-new-site). Your directory structure should look something like this:
+Note that the cover & logo assets need to be under the static directory that we created [above](#creating-a-new-site). Your directory structure should look something like this:
 
 ```bash
 $ tree
@@ -181,9 +177,9 @@ $ tree
 
 Now that we have a proper cover image and logo in place, the page is starting to feel like a real site. If you make another call to `hugo serve` and refresh your browser state, this is what things should now look like:
 
-![First Look](https://raw.githubusercontent.com/dencold/static/master/hasper/bayactive-second.png)
+![Second Look](https://raw.githubusercontent.com/dencold/static/master/hasper/bayactive-second.png)
 
-Much better!! Now, try to switch to your own cover image and logo. Update the `config.yaml` and rename the site/update the description. You've now got your very own static website. Start writing some content and share with the world!
+Much better!! Now, try to switch to your own cover image and logo. Update the `config.yaml` and rename the site/update the description. You now have your own static website. Start writing some content and sharing with the world!
 
 
 ## Configuring Multiple Authors
