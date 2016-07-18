@@ -179,8 +179,21 @@ Now that we have a proper cover image and logo in place, the page is starting to
 
 ![Second Look](https://raw.githubusercontent.com/dencold/static/master/hasper/bayactive-second.png)
 
-Much better!! Now, try to switch to your own cover image and logo. Update the `config.yaml` and rename the site/update the description. You now have your own static website. Start writing some content and sharing with the world!
+Much better!! Now, try to switch to your own cover image and logo. Update the `config.yaml` and rename the site/update the description. 
 
+You now have everything you need to start producing your own content. Go back and edit your welcome.md post and make a more personal welcome note.
+
+To create additional posts, use the Hugo command we introduced above:
+
+```bash
+$ hugo new post/post-name.md -f yaml
+```
+
+Start writing some content and sharing with the world!
+
+## Next steps
+
+If you're comfortable with the basics of hasper, there is a lot more to explore. Your next step is to check out the `config-example.yaml` file. This file is fully documented and tries its best to explain each setting available in Hasper. You can pull any of the settings into your own `config.yaml` file to incorporate on your own site.
 
 ## Configuring Multiple Authors
 
