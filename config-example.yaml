@@ -1,43 +1,61 @@
 ---
-baseurl: "http://twin-peaks.com/"
-languageCode: "en-us"
-title: "Twin Peaks"
-paginate: 5
-copyright: "All rights reserved - 2016"
-canonifyurls: true
-disqusShortname: "YOUR_SHORT_NAME_HERE"
+baseurl: "http://www.bayactive.org/"        # hostname (and path) to the root, e.g. http://spf13.com/
+languageCode: "en-us"                       # language to use in meta headers
+title: "BayActive"                          # title that appears on main splash page for site
+paginate: 5                                 # number of posts per page that are displayed
+copyright: "All rights reserved - 2016"     # copyright details
+buildDrafts: true                           # include content marked as draft
+canonifyurls: true                          # TODO: what does this do exactly?
+#disqusShortname: "YOUR_SHORT_NAME_HERE"     # if using disqus, username is set here
+metaDataFormat: "yaml"                      # toml, yaml, or json
 
+# hugo special directories. generally do *not* need to modify these
+contentdir: "content"
+dataDir: "data"
+defaultLayout: "post"
+layoutdir: "layouts"
+paginatePath: "page"
+publishdir: "public"
+staticdir: "static"
+themesdir: "themes"
+
+# theme/site specific configuration
 params:
-  description: "Who killed Laura Palmer?"
-  cover: "/images/cover.jpg"
-  author: "Agent Cooper" 
-  logo: "/images/logo.png"
-  googleAnalyticsUserID: "YOUR_GA_ID_HERE"
-  # Optional RSS-Link, if not provided it defaults to the standard index.xml
-  RSSLink: "http://feeds.feedburner.com/..." 
-  githubName: "dencold"
-  twitterName: "dencold"
-  hideHUGOSupport: true
-  shares: 
-    twitter: false
+  description: "Hikes, bikes & rides in the bay"   # subtitle that appears under the site's title
+  cover: "/img/cover.jpg"                   # main image used for cover splashpage
+  logo: "/img/logo.svg"                     # site logo. appears in upper-left corner of site
+  author: "dennis"                          # default site author
+  hideHUGOSupport: true                     # by default, hasper puts a nod to hugo in footer, set to true if you wish to hide
+#  githubName: "bayactive"                     # if set, hasper will display github logo with link above site title
+  twitterName: "bayactive"                    # if set, hasper will display twitter logo with link above site title
+#  googleAnalyticsUserID: "YOUR_GA_ID_HERE" # TODO: check on this config. I think there is a googleAnalytics in hugo variables that is canonical
+#  RSSLink: "http://feeds.feedburner.com/..." # TODO: how is this different from hugo variable config? Optional RSS-Link, if not provided it defaults to the standard index.xml
+
+  # there are share links at the bottom of every post. all options are listed below.
+  # set the shares you'd like active to true.
+  shares:
+    twitter: true
     facebook: true
     google-plus: true
+    pinterest: false
 
+# authors config. use this section to provide full meta-data about the authors on your site
 author:
   dennis:
-    name: "Agent Cooper"
-    location: "Washington, D.C."
-    bio: "in search of damned good coffee"
-    thumbnail: "/images/avatar.jpg"
+    name: "Dennis Coldwell"                 # author's full name
+    location: "Berkeley, CA"                # author's whereabouts
+    bio: "trying to leave things better than I found them."  # short bio, appears below author details on post
+    thumbnail: "/img/avatar.jpg"            # author's avatar
 
+# menu config. this section defines the area that appears when the user clicks
+# the hamburger menu in upper-right hand corner of the site.
 menu:
   main:
-    - name: "Blog"
-      weight: -120
-      identifier: "blog"
-      url: "/"
+    - name: "Blog"                          # name that appears in the menu list
+      weight: -120                          # order it appears more negative == closer to top of list
+      identifier: "blog"                    # TODO: not sure what this is responsible for
+      url: "/"                              # link address to use when user clicks on menu option
     - name: "About"
       weight: -110
       identifier: "about"
       url: "/about"
-  
