@@ -2,6 +2,7 @@
 baseurl: "http://www.bayactive.org/"        # hostname (and path) to the root, e.g. http://spf13.com/
 languageCode: "en-us"                       # language to use in meta headers
 title: "BayActive"                          # title that appears on main splash page for site
+theme: "hasper"                             # theme you'd like to use for generating the site
 paginate: 5                                 # number of posts per page that are displayed
 copyright: "All rights reserved - 2016"     # copyright details
 buildDrafts: true                           # include content marked as draft
@@ -26,14 +27,14 @@ params:
   logo: "/img/logo.svg"                     # site logo. appears in upper-left corner of site
   author: "dennis"                          # default site author
   hideHUGOSupport: true                     # by default, hasper puts a nod to hugo in footer, set to true if you wish to hide
-#  githubName: "bayactive"                     # if set, hasper will display github logo with link above site title
-  twitterName: "bayactive"                    # if set, hasper will display twitter logo with link above site title
+  githubName: ""                            # if set, hasper will display github logo with link above site title
+  twitterName: "bayactive"                  # if set, hasper will display twitter logo with link above site title
 #  googleAnalyticsUserID: "YOUR_GA_ID_HERE" # TODO: check on this config. I think there is a googleAnalytics in hugo variables that is canonical
 #  RSSLink: "http://feeds.feedburner.com/..." # TODO: how is this different from hugo variable config? Optional RSS-Link, if not provided it defaults to the standard index.xml
 
-  # there are share links at the bottom of every post. all options are listed below.
+  # there are sharing links at the bottom of every post. all options are listed below.
   # set the shares you'd like active to true.
-  shares:
+  sharing:
     twitter: true
     facebook: true
     google-plus: true
