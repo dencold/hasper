@@ -1,5 +1,5 @@
 {{$baseurl := .Site.BaseURL}}
-{{$author := index .Site.Author (or .Params.author .Site.Params.author)}}
+{{$author := or .Params.author .Site.Params.author}}
 
 <!DOCTYPE html>
 <html lang="{{.Site.LanguageCode}}">
@@ -28,32 +28,36 @@
 
         </header>
 
-      <section class="post-content">
-        {{.Content}}
-      </section>
+        <section class="post-content">
+          {{.Content}}
+        </section>
 
-      <footer class="post-footer">
+        <footer class="post-footer">
 
-      {{if $author.thumbnail}}
-      <figure class="author-image">
-        <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{$author.thumbnail}})">
-          <span class="hidden">{{.Site.Params.author}}'s Picture</span>
-        </a>
-      </figure>
-      {{else if .Site.Params.logo}}
-      <figure class="author-image">
-        <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{.Site.Params.logo}})">
-          <span class="hidden">{{.Site.Params.author}}'s Picture</span>
-        </a>
-      </figure>
-      {{end}}
+        {{if $author}}
+          {{$authorDetail := index .Site.Author $author}}
 
-    {{partial "author.html" .}}
-    {{partial "share.html" .}}
-    {{partial "disqus.html" .}}
+          {{if $authorDetail.thumbnail}}
+            <figure class="author-image">
+              <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{$authorDetail.thumbnail}})">
+                <span class="hidden">{{.Site.Params.author}}'s Picture</span>
+              </a>
+            </figure>
+          {{else if .Site.Params.logo}}
+            <figure class="author-image">
+              <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{.Site.Params.logo}})">
+                <span class="hidden">Site Logo</span>
+              </a>
+            </figure>
+          {{end}}
+        {{end}}
 
-  </footer>
-</article>
+        {{partial "author.html" .}}
+        {{partial "share.html" .}}
+        {{partial "disqus.html" .}}
 
-</main>
+        </footer>
+      </article>
+
+    </main>
 {{ partial "footer.html" . }}
