@@ -217,4 +217,4 @@ You can now reference either "david" or "pamela" on the author attribute of a po
 
 ## Attribution
 
-Hasper was originally [a fork](https://github.com/dencold/hugo-theme-casper) of the [hugo-theme-casper](https://github.com/vjeantet/hugo-theme-casper). However, the original author has not been responding to [pull requests](https://github.com/vjeantet/hugo-theme-casper/pull/41). Hasper now lives as its own separate repository, for a full list of changes from the original theme, consult the [CHANGELOG](https://github.com/dencold/hasper/CHANGELOG.md).
+Hasper was originally [a fork](https://github.com/dencold/hugo-theme-casper) of the [hugo-theme-casper](https://github.com/vjeantet/hugo-theme-casper). However, the original author has not been responding to [pull requests](https://github.com/vjeantet/hugo-theme-casper/pull/41). Hasper now lives as its own separate repository, for a full list of changes from the original theme, consult the [CHANGELOG](CHANGELOG.md).
