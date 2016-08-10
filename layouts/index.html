@@ -14,14 +14,14 @@
     {{$paginator := .Paginate (where .Data.Pages "Section" "!=" "author")}}
 
     {{/*
-         we only show the fullscreen banner if we are on the first page
+         we only show the fullscreen cover if we are on the first page
          (otherwise it gets very confusing for the user, who needs to scroll
          in order to see more content)
     */}}
     {{if eq $paginator.PageNumber 1}}
-      {{partial "banner_full.html" .}}
+      {{partial "covers/landing.html" .}}
     {{else}}
-      {{partial "banner.html" .}}
+      {{partial "covers/paging.html" .}}
     {{end}}
 
     <main id="content" class="content" role="main">

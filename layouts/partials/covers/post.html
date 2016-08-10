@@ -1,0 +1,16 @@
+{{$coverImage := or .Params.image .Params.cover .Site.Params.cover}}
+
+{{if not $coverImage}}
+<header class="main-header tag-head no-cover">
+{{else}}
+<header class="main-header post-head" style="background-image: url({{$coverImage}})">
+{{end}}
+
+{{partial "nav.html" .}}
+
+<div class="vertical">
+  <div class="main-header-content inner">
+    <h1 class="page-title">{{.Title}}</h1>
+  </div>
+</div>
+</header>
