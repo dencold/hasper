@@ -2,6 +2,8 @@
 
 {{if not $coverImage}}
 <header class="main-header no-cover">
+{{else if eq .Site.Params.fullCover false}}
+<header class="main-header large" style="background-image: url({{$coverImage}})">
 {{else}}
 <header class="main-header" style="background-image: url({{$coverImage}})">
 {{end}}
