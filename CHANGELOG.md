@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 - This project adheres to [Semantic Versioning](http://semver.org/)
 
 ## [Unreleased]
-
+- Cover image size is now configurable via `fullCover` property 6c76632
 
 ## 0.0.1 - 2016-08-08
 ### Added
