@@ -24,6 +24,7 @@ themesdir: "themes"
 params:
   description: "Hikes, bikes & rides in the bay"   # subtitle that appears under the site's title
   cover: "/img/cover.jpg"                   # main image used for cover splashpage
+  fullCover: true                           # fullscreen cover (true) or allow a peek of content (false) defaults to true
   logo: "/img/logo.svg"                     # site logo. appears in upper-left corner of site
   author: "dennis"                          # default site author
   hideHUGOSupport: true                     # by default, hasper puts a nod to hugo in footer, set to true if you wish to hide
