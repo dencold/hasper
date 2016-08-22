@@ -5,7 +5,7 @@
   {{if $authorDetail.thumbnail}}
   <figure class="author-image">
     <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{$authorDetail.thumbnail}})">
-      <span class="hidden">{{.Site.Params.author}}'s Picture</span>
+      <span class="hidden">Author's Picture</span>
     </a>
   </figure>
   {{else if .Site.Params.logo}}
@@ -17,7 +17,7 @@
   {{end}}
 
   <section class="author">
-    <h4><a href="{{.Site.BaseURL}}">{{$authorDetail.name}}</a></h4>
+    <h4><a href="{{.Site.BaseURL}}">{{$authorDetail.firstName}} {{$authorDetail.lastName}}</a></h4>
 
     {{if $authorDetail.bio}}
     <p>{{$authorDetail.bio}}</p>

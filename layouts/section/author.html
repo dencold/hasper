@@ -22,7 +22,7 @@
           {{if $author.thumbnail}}
           <div class="author-list-img" style="background-image: url({{$author.thumbnail}})"></div>
           {{end}}
-          <h4><a href="/author/{{$shortname}}">{{$author.name}}</a></h4>
+          <h4><a href="/author/{{$shortname}}">{{$author.firstName}} {{$author.lastName}}</a></h4>
           {{if $author.bio}}
           <p><a href="/author/{{$shortname}}">{{$author.bio}}</a></p>
           {{else}}
