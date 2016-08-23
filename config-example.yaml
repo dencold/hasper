@@ -44,10 +44,20 @@ params:
 # authors config. use this section to provide full meta-data about the authors on your site
 author:
   dennis:
-    name: "Dennis Coldwell"                 # author's full name
+    firstName: "Dennis"                     # author's first name
+    lastName: "Coldwell"                    # author's last name
+    displayName: "dennis"                   # author's prefered display name
     location: "Berkeley, CA"                # author's whereabouts
     bio: "trying to leave things better than I found them."  # short bio, appears below author details on post
     thumbnail: "/img/avatar.jpg"            # author's avatar
+  mikasa:
+    firstName: "Mikasa"
+    lastName: "Ackerman"
+    displayName: "mikasa"
+    location: "Shiganshina"
+    bio: "Better try something than to simply wait for death."
+    thumbnail: "/img/mikasa.jpg"
+
 
 # menu config. this section defines the area that appears when the user clicks
 # the hamburger menu in upper-right hand corner of the site.
