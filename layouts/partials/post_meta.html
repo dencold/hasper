@@ -14,8 +14,8 @@
       <img class="author-thumb" src="{{.}}" alt="Author image" nopin="nopin" />
     {{end}}
 
-    {{/* print the display name from the details */}}
-    {{$authorDetail.displayName}}
+    {{/* print the shortname (id) from the details */}}
+    {{$authorDetail.id}}
   {{else}}
     {{/* if no author details are set, just print whatever is set on the $author field */}}
     {{$author}}
