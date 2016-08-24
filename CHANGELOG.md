@@ -5,7 +5,12 @@ All notable changes to this project will be documented in this file.
 - This project adheres to [Semantic Versioning](http://semver.org/)
 
 ## [Unreleased]
-- Cover image size is now configurable via `fullCover` property 6c76632f70f8930245a2d3274d0171fc3abd0a61
+### Added
+
+## 0.0.2 - 2016-08-24
+### Added
+- Author metadata now uses firstName/lastName/id from upcoming Hugo change #13
+- Cover image size is now configurable via `fullCover` property #12
 
 ## 0.0.1 - 2016-08-08
 ### Added
