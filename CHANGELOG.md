@@ -5,12 +5,11 @@ All notable changes to this project will be documented in this file.
 - This project adheres to [Semantic Versioning](http://semver.org/)
 
 ## [Unreleased]
-### Added
 
 ## 0.0.2 - 2016-08-24
 ### Added
-- Author metadata now uses firstName/lastName/id from upcoming Hugo change #13
-- Cover image size is now configurable via `fullCover` property #12
+- Author metadata now uses firstName/lastName/id from upcoming Hugo change [#13](https://github.com/dencold/hasper/issues/13)
+- Cover image size is now configurable via `fullCover` property [#12](https://github.com/dencold/hasper/issues/12)
 
 ## 0.0.1 - 2016-08-08
 ### Added
