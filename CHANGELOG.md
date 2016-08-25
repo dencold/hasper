@@ -7,8 +7,12 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 
 ## 0.0.2 - 2016-08-24
+### Changed
+- Replaced author.name with author.firstName and author.lastName, make sure to update config.yaml
+- Author short names are referenced from the author.id field, add this to config.yaml as well
+
 ### Added
-- Author metadata now uses firstName/lastName/id from upcoming Hugo change [#13](https://github.com/dencold/hasper/issues/13)
+- Author metadata follows upcoming Hugo change [#13](https://github.com/dencold/hasper/issues/13)
 - Cover image size is now configurable via `fullCover` property [#12](https://github.com/dencold/hasper/issues/12)
 
 ## 0.0.1 - 2016-08-08
