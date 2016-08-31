@@ -3,11 +3,7 @@
 <!DOCTYPE html>
 <html lang="{{.Site.LanguageCode}}">
 <head>
-  {{partial "meta_includes.html" .}}
-  <title>
-    {{if ne .URL "/"}} {{.Title}} &middot; {{end}} {{.Site.Title}}
-  </title>
-  {{partial "head_includes.html" .}}
+  {{partial "head/includes.html" .}}
 </head>
 <body class="nav-closed">
 
