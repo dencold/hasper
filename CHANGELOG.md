@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file.
 - This project adheres to [Semantic Versioning](http://semver.org/)
 
 ## [Unreleased]
+- Headers are no longer **bold**, affects page titles, etc. [#22](https://github.com/dencold/hasper/issues/22)
 
 ## 0.0.2 - 2016-08-24
 ### Changed
