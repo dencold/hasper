@@ -1,6 +1,10 @@
 # hasper
 
-Hasper is a port of [Ghost's](https://ghost.org/) casper theme for the [Hugo](https://gohugo.io) static-site generator. It hopes to get you from zero to beautiful with minimal effort.
+Hasper is a port of [Ghost's](https://ghost.org/) casper theme for the [Hugo](https://gohugo.io) static-site generator. It hopes to get you from zero to beautiful with minimal effort. Here's what it looks like:
+
+![Hasper Cover](https://raw.githubusercontent.com/dencold/static/master/hasper/bayactive-cover.png)
+
+The theme strives for good design, is responsive out of the box, and has great support for images and media. Additional features include [Disqus](https://disqus.com/) comments, configurable author details, and social network support.
 
 ## Installing Hugo
 
