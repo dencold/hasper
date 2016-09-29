@@ -199,25 +199,49 @@ Start writing some content and sharing with the world!
 
 If you're comfortable with the basics of hasper, there is a lot more to explore. Your next step is to check out the `config-example.yaml` file. This file is fully documented and tries its best to explain each setting available in Hasper. You can pull any of the settings into your own `config.yaml` file to incorporate on your own site.
 
-## Configuring Multiple Authors
+## Author configuration
 
-You can add as many authors as you like under the `author` section of the `config.yaml`. In the example above, we just had one author, David Hasselhoff, here's how we could add Pamela to the blog roll:
+Hasper supports multiple authors out of the box. So far, we haven't set any author details, but a small update to the site's `config.yaml` will change all of that. Here is an example from BayActive's `config.yaml`, which defines two authors, Dennis & Greg:
 
 ```yaml
 author:
-  david:
-    name: "David Hasselhoff"
-    bio: "Don't Hassle the Hoff"
-    location: "Baltimore, MD"
-    thumbnail: "images/avatar.jpg"
-  pamela:
-    name: "Pamela Anderson"
-    bio: "Little known fact, I am vegan"
-    location: "Canada"
-    thumbnail: "images/pamela.jpg"
+  dennis:
+    id: "dennis"                            # author's id/short name
+    firstName: "Dennis"                     # author's first name
+    lastName: "Coldwell"                    # author's last name
+    displayName: "dennis"                   # author's prefered display name
+    location: "Berkeley, CA"                # author's whereabouts
+    bio: "trying to leave things better than I found them."  # short bio, appears below author details on post
+    thumbnail: "/img/avatar.jpg"            # author's avatar
+  lemond:                                   # you can configure multiple authors
+    id: "lemond"
+    firstName: "Greg"
+    lastName: "LeMond"
+    location: "Lakewood, CA"
+    bio: "It never gets easier, you just go faster."
+    thumbnail: "/img/lemond.jpg"
 ```
 
-You can now reference either "david" or "pamela" on the author attribute of a post's [front-matter](https://gohugo.io/content/front-matter/) and their information will automatically get pulled in by hugo.
+Now that you have the metadata for your author defined, you can start using it in posts via the author attribute of a post's [front-matter](https://gohugo.io/content/front-matter/). Here's an example:
+
+```yaml
+---
+date: 2016-06-27T17:09:17-07:00
+draft: true
+title: welcome
+author: dennis
+---
+
+Thanks for visiting BayActive! We hope to be a helpful resource for finding hiking/biking/running routes in the bay area.
+```
+
+Here's how that visually changes things:
+![Author summary](https://raw.githubusercontent.com/dencold/static/master/hasper/bayactive-author-summary.png)
+
+Even better...look what happens when you go to the full posting:
+![Author detail](https://raw.githubusercontent.com/dencold/static/master/hasper/bayactive-author-detail.png)
+
+We now have a nice section for author details at the bottom which pulls in a lot of the metadata you created earlier in the site's `config.yml`. Looking good!!
 
 ## Attribution
 
