@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 - Headers are no longer **bold**, affects page titles, etc. [#22](https://github.com/dencold/hasper/issues/22)
+- Making max-width 800px, up from 720px. I prefer a little longer line length on posts. [f44c174](https://github.com/dencold/hasper/commit/f44c17489c5965c2d433126bfebb4df00ee9950f)
 
 ## 0.0.2 - 2016-08-24
 ### Changed
