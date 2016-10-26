@@ -4,7 +4,7 @@
 
   {{if $authorDetail.thumbnail}}
   <figure class="author-image">
-    <a class="img" href="{{.Site.BaseURL}}" style="background-image: url({{$authorDetail.thumbnail}})">
+    <a class="img" href="/author/{{$authorDetail.id}}" style="background-image: url({{$authorDetail.thumbnail}})">
       <span class="hidden">Author's Picture</span>
     </a>
   </figure>
@@ -17,12 +17,12 @@
   {{end}}
 
   <section class="author">
-    <h4><a href="{{.Site.BaseURL}}">{{$authorDetail.firstName}} {{$authorDetail.lastName}}</a></h4>
+    <h4><a href="/author/{{$authorDetail.id}}">{{$authorDetail.firstName}} {{$authorDetail.lastName}}</a></h4>
 
     {{if $authorDetail.bio}}
     <p>{{$authorDetail.bio}}</p>
     {{else}}
-    <p>Read <a href="{{.Site.BaseURL}}">more posts</a> by this author.</p>
+    <p>Read <a href="{{.Site.BaseURL}}">more posts</a> from this site.</p>
     {{end}}
 
     <div class="author-meta">

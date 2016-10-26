@@ -11,11 +11,15 @@
   {{if $authorDetailSet}}
     {{$authorDetail := index .Site.Author $author}}
     {{with $authorDetail.thumbnail}}
+    <a href="/author/{{$authorDetail.id}}">
       <img class="author-thumb" src="{{.}}" alt="Author image" nopin="nopin" />
+    </a>
     {{end}}
 
     {{/* print the shortname (id) from the details */}}
-    {{$authorDetail.id}}
+    <a href="/author/{{$authorDetail.id}}">
+    {{- $authorDetail.id -}}
+    </a>
   {{else}}
     {{/* if no author details are set, just print whatever is set on the $author field */}}
     {{$author}}
