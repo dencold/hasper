@@ -2,6 +2,10 @@
   {{if .Site.Copyright}}
   <section class="copyright">
     {{.Site.Copyright | safeHTML}}
+
+    {{if .Site.Params.creativeCommons}}
+    <a rel="license" href="http://creativecommons.org/licenses/{{.Site.Params.creativeCommons}}/4.0/"><img alt="Creative Commons License" style="vertical-align: text-bottom" src="https://i.creativecommons.org/l/{{.Site.Params.creativeCommons}}/4.0/80x15.png" /></a>
+    {{end}}
   </section>
   {{end}}
 
