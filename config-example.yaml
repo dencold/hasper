@@ -4,7 +4,7 @@ languageCode: "en-us"                       # language to use in meta headers
 title: "BayActive"                          # title that appears on main splash page for site
 theme: "hasper"                             # theme you'd like to use for generating the site
 paginate: 5                                 # number of posts per page that are displayed
-copyright: "All rights reserved - 2016"     # copyright details
+copyright: "All rights reserved - 2016"     # copyright details, if set, will appear in site footer
 buildDrafts: true                           # include content marked as draft
 canonifyurls: true                          # TODO: what does this do exactly?
 #disqusShortname: "YOUR_SHORT_NAME_HERE"     # if using disqus, username is set here
@@ -27,6 +27,7 @@ params:
   fullCover: true                           # fullscreen cover (true) or allow a peek of content (false) defaults to true
   logo: "/img/logo.svg"                     # site logo. appears in upper-left corner of site
   author: "dennis"                          # default site author
+  creativeCommons: "by-sa"                  # if you license using creative commons, set this to be your license type. Requires .Site.copyright to be set as well.
   hideHUGOSupport: true                     # by default, hasper puts a nod to hugo in footer, set to true if you wish to hide
   githubName: ""                            # if set, hasper will display github logo with link above site title
   twitterName: "bayactive"                  # if set, hasper will display twitter logo with link above site title
