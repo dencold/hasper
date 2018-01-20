@@ -31,7 +31,6 @@ params:
   hideHUGOSupport: true                     # by default, hasper puts a nod to hugo in footer, set to true if you wish to hide
   githubName: ""                            # if set, hasper will display github logo with link above site title
   twitterName: "bayactive"                  # if set, hasper will display twitter logo with link above site title
-#  googleAnalyticsUserID: "YOUR_GA_ID_HERE" # TODO: check on this config. I think there is a googleAnalytics in hugo variables that is canonical
 #  RSSLink: "http://feeds.feedburner.com/..." # TODO: how is this different from hugo variable config? Optional RSS-Link, if not provided it defaults to the standard index.xml
 
   # there are sharing links at the bottom of every post. all options are listed below.
