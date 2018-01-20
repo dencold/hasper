@@ -243,6 +243,24 @@ Even better...look what happens when you go to the full posting:
 
 We now have a nice section for author details at the bottom which pulls in a lot of the metadata you created earlier in the site's `config.yml`. Looking good!!
 
+## Google analytics configuration
+
+You can add the Google Analytics script to your posts and pages by defining the `googleAnalytics` variable in your config.yaml file:
+
+```yaml
+---
+baseurl: http://www.bayactive.org
+languageCode: en-us
+title: BayActive
+googleAnalytics: "UA-12345-6"
+params:
+  cover: /img/cover.jpg
+  logo: /img/logo.svg
+  description: Hikes, bikes & rides in the bay
+...
+---
+```
+
 ## Attribution
 
 Hasper was originally [a fork](https://github.com/dencold/hugo-theme-casper) of the [hugo-theme-casper](https://github.com/vjeantet/hugo-theme-casper). However, the original author has not been responding to [pull requests](https://github.com/vjeantet/hugo-theme-casper/pull/41). Hasper now lives as its own separate repository, for a full list of changes from the original theme, consult the [CHANGELOG](CHANGELOG.md).
