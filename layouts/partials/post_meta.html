@@ -16,9 +16,9 @@
     </a>
     {{end}}
 
-    {{/* print the shortname (id) from the details */}}
+    {{/* print the prefered display name (displayName) from the details */}}
     <a href="/author/{{$authorDetail.id}}">
-    {{- $authorDetail.id -}}
+    {{- $authorDetail.displayname -}}
     </a>
   {{else}}
     {{/* if no author details are set, just print whatever is set on the $author field */}}
